@@ -12,7 +12,7 @@ for i in range(count_char):
     x = random.randint(97,122)
     with open('key.txt', 'a', encoding='utf-8') as file:
         file.write(f"{str(x)} ")
-    add_value = (ascii_values[i] + x)%ascii_values[i]
+    add_value = (ascii_values[i] + x)%aoscii_values[i]
     ascii_values[i] = ascii_values[i] + add_value
 text = ''.join(chr(value) for value in ascii_values)
 print(text)

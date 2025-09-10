@@ -115,10 +115,26 @@ class Cloud:
         self.width = self.image.get_width()
 
     def update(self):
-        self.x -= game_speed
+        self.x -= game_speed          # Przesuwa obiekt w lewo z prędkością gry
+        if self.x < -self.width:      # Jeśli obiekt całkiem zniknie z ekranu z lewej strony
+            self.x = screen_w + random.randint(2500,3000)  # Teleportuje go na prawo za ekranem
+            self.y = random.randint(50,100)                # Ustawia nową losową wysokość
+    def draw(self, SCREEN):
+        SCREEN.blit(self.image, (self.x, self.y))
+
+class Obstacle:
+    def __init__(self, image, type):
+        self.image = image
+        self.type = type
+        self.rect = self.image[self.type].get_rect()
+        self.rect.x = screen_w
+
+    def update(self):
+        self.rect.x -= game_speed
         if self.rect.x < -self.rect.width:
             obstacles.pop()
-        
+    
+
         
 
 
