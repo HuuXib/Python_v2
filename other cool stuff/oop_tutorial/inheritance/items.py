@@ -11,6 +11,7 @@ class Item():
 
 class Armor(Item):
     def defense(self, protection):
+        self.protection = protection
         print(f"{self.name} has {protection} defense")
 
 class Weapon(Item):
@@ -18,7 +19,7 @@ class Weapon(Item):
         print(f"{self.name} is a Weapon")
     def damage(self,dmg):
         self.dmg = dmg
-        print(f"{self.name} zadanje {dmg} obrażeń")
+        print(f"{self.name} zadaje {dmg} obrażeń")
 
 class Staff(Weapon):
     def typeofdmg(self):
@@ -26,5 +27,17 @@ class Staff(Weapon):
     def forwho(self, typeofcharacter="Mage"):
         print(f"This weapon can be used only by {typeofcharacter}")
 
-class Attack(Weapon, Armor):
-    def attack(self, ):
+class Attack():
+    def __init__(self, weapon: Weapon, armor: Armor):
+        self.weapon = weapon
+        self.armor = armor
+
+    def attack(self):
+        real_dmg = self.weapon.dmg - self.armor.protection
+        if real_dmg < 0:
+            real_dmg = 0
+        print(f"You attacked with {self.weapon.name} and dealt {real_dmg} damage")
+        print(f"Enemy armor absorbed {self.armor.protection} damage")
+
+
+
