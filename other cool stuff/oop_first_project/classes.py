@@ -112,10 +112,10 @@ class Warrior:
     
     RUN_VELOCITY = 0
 
-    def __init__(self):
+    def __init__(self, screen_width, screen_height):
+        self.lookleft = 0
         self.footsteps_noises = FOOTSTEP_NOISES
         self.sword_sound = pygame.mixer.Sound(os.path.join("assets/melee_sounds", "sword sound.wav"))
-        self.sword_sound.set_volume(0.7)
         self.sound_played = False
         self.step_index = 0
         self.move_img = MOVING
@@ -133,12 +133,16 @@ class Warrior:
 
 
         self.run_img_left = [pygame.transform.flip(img, True, False) for img in self.run_img]
+        self.attack_img_left = [pygame.transform.flip(img, True, False) for img in self.attack_img]
+        self.idle_img_left = [pygame.transform.flip(img, True, False) for img in self.idle_img]
 
         self.warrior_move = False
         self.warrior_run = False
         self.warrior_attack = False
         self.warrior_idle = True
         self.warrior_run_back = False
+        self.warrior_attack_left = False
+        self.warrior_idle_left = False
 
         self.run_velocity = self.RUN_VELOCITY
         self.image = self.idle_img[0]
@@ -146,35 +150,55 @@ class Warrior:
         self.warrior_rect.x = self.X_POS
         self.warrior_rect.y = self.Y_POS
 
+        self.world_width = 4000
+        self.world_height = screen_height
         
     def update(self, userInput):
 
         if (userInput[pygame.K_a] or userInput[pygame.K_d]) and userInput[pygame.K_LSHIFT]:
-            self.run_velocity = 30
             self.warrior_idle = False
             self.warrior_run = True
             self.warrior_attack = False
             self.warrior_move = False
         elif userInput[pygame.K_f]:
+            self.warrior_idle_left = False
             self.warrior_idle = False
             self.warrior_run = False
-            self.warrior_attack = True
-            self.warrior_move = False  
+            if self.lookleft == 0:
+                self.warrior_attack = True
+                self.warrior_attack_left = False
+            elif self.lookleft == 1:
+                self.warrior_attack_ = False
+                self.warrior_attack_left = True
+            self.warrior_move = False
+            self.warrior_run = False
+            self.warrior_run_back = False  
         elif userInput[pygame.K_d]:
+            self.warrior_idle_left = False
             self.warrior_idle = False
             self.warrior_run = False
             self.warrior_attack = False
+            self.warrior_attack_left = False
             self.warrior_move = True
+            self.warrior_run_back = False 
         elif userInput[pygame.K_a]:
+            self.warrior_idle_left = False
             self.warrior_run_back = True
             self.warrior_idle = False
             self.warrior_run = False
             self.warrior_attack = False
+            self.warrior_attack_left = False
             self.warrior_move = False
         else:
-            self.warrior_idle = True
+            if self.lookleft == 1:
+                self.warrior_idle = False
+                self.warrior_idle_left = True
+            elif self.lookleft == 0:
+                self.warrior_idle = True
+                self.warrior_idle_left = False
             self.warrior_run = False
             self.warrior_attack = False
+            self.warrior_attack_left = False
             self.warrior_move = False
             self.warrior_run_back = False
         if self.warrior_move:
@@ -185,23 +209,31 @@ class Warrior:
             self.run()
         if self.warrior_idle:
             self.idle()
+        if self.warrior_idle_left:
+            self.idleback()
         if self.warrior_attack:
             self.attack()
+        if self.warrior_attack_left:
+            self.attackleft()
         if self.step_index >= 1000: 
             self.step_index = 0
+
+        self.warrior_rect.x = max(0, min(self.warrior_rect.x, self.world_width - self.warrior_rect.width))
     def run(self):
+        self.lookleft = 0
         if self.step_index == 0 or self.step_index%4 == 0:
-            self.footsteps_noises[random.randint(0,5)].play()
+            self.footsteps_noises[random.randint(0,len(self.footsteps_noises) - 1)].play()
         self.image = self.run_img[self.step_index % len(self.run_img)]
-        self.run_velocity = 30
+        self.run_velocity = 30 * 2
         self.warrior_rect.x += self.run_velocity
         self.step_index += 1
         if self.step_index >= len(self.run_img):
             self.step_index = 0
     def moveback(self):
+        self.lookleft = 1
         if self.step_index == 0 or self.step_index%4 == 0:
             self.footsteps_noises[random.randint(0,5)].play()
-        self.run_velocity = -30
+        self.run_velocity = -30 * 2
         self.image = self.run_img_left[self.step_index  % len(self.run_img_left)]
         self.warrior_rect.x += self.run_velocity
         self.step_index += 1
@@ -213,7 +245,14 @@ class Warrior:
         self.step_index += 1
         if self.step_index >= 8* len(self.idle_img): 
             self.step_index = 0
+    def idleback(self):
+        self.run_velocity = 0
+        self.image = self.idle_img_left[self.step_index //8 % len(self.idle_img_left)]
+        self.step_index += 1
+        if self.step_index >= 8* len(self.idle_img): 
+            self.step_index = 0
     def attack(self):
+        self.run_velocity = 0
         if self.step_index == 0 or self.step_index == 6 or self.step_index == 11 and not self.sound_played :
             self.sword_sound.play()
             self.sound_played = True
@@ -224,14 +263,23 @@ class Warrior:
         if self.step_index >= len(self.attack_img) // 2:
             self.step_index = 0
             self.sound_played = False
-
-
+    def attackleft(self):
+        self.run_velocity = 0
+        if self.step_index == 0 or self.step_index == 6 or self.step_index == 11 and not self.sound_played :
+            self.sword_sound.play()
+            self.sound_played = True
+        self.image = self.attack_img_left[self.step_index *2  % len(self.attack_img_left)]
+        self.step_index += 1
+        # if self.step_index >= 2* len(self.attack_img):
+        #     self.step_index = 0
+        if self.step_index >= len(self.attack_img) // 2:
+            self.step_index = 0
+            self.sound_played = False
 class Background():
-    
-
     def __init__(self, screen_width, screen_height):
+        self.run_velocity = 0
         # self.zmienna_z_klasy_a = klasa_a.zmienna
-        self.run_velocity = Warrior.RUN_VELOCITY
+        # self.run_velocity = Warrior.RUN_VELOCITY
         self.back_trees = BACKGROUND_FOREST_BACK
         self.mid_trees = BACKGROUND_FOREST_MID
         self.front_trees = BACKGROUND_FOREST_FRONT
@@ -251,183 +299,168 @@ class Background():
         self.mid_speed = 1.5
         self.front_speed = 3
         self.light_speed = 2
-    def update(self, player_velocity):
-        self.back_x -= self.back_speed * player_velocity
-        self.mid_x -= self.mid_speed * player_velocity
-        self.front_x -= self.front_speed * player_velocity
-        self.light_x -= self.light_speed + player_velocity
+    def update(self, player_velocity, camera_x):
+        self.back_x = -camera_x * self.back_speed
+        self.mid_x = -camera_x * self.mid_speed
+        self.front_x = -camera_x * self.front_speed
+        self.light_x = -camera_x * self.light_speed
 
         #zapetlanie obrazkow
 
-        screen_width = self.back_trees.get_width()
 
-        #ruch
-        self.back_x %= screen_width
-        self.mid_x %= screen_width
-        self.front_x %= screen_width
-        self.light_x %= screen_width
+        # ruch
+        # self.back_x %= screen_width
+        # self.mid_x %= screen_width
+        # self.front_x %= screen_width
+        # self.light_x %= screen_width
 
     def draw(self, screen):
-        direction = 1 if self.run_velocity == 30 else -1
-        screen.blit(self.back_trees, (self.back_x, 0))
-        screen.blit(self.back_trees, (self.back_x + direction * self.back_trees.get_width(), 0))
-        screen.blit(self.mid_trees, (self.mid_x, 0))
-        screen.blit(self.mid_trees, (self.mid_x + direction *self.mid_trees.get_width(), 0))
-        screen.blit(self.front_trees, (self.front_x, 0))
-        screen.blit(self.front_trees, (self.front_x + direction *self.front_trees.get_width(), 0))
-        screen.blit(self.light, (self.light_x, 0))
-        screen.blit(self.light, (self.light_x + direction *self.light.get_width(), 0))
+        screen_width = self.back_trees.get_width()
+        
+        # Rysuj warstwy tła
+        screen.blit(self.back_trees, (self.back_x % screen_width, 0))
+        screen.blit(self.back_trees, (self.back_x % screen_width - screen_width, 0))
+        
+        screen.blit(self.mid_trees, (self.mid_x % screen_width, 0))
+        screen.blit(self.mid_trees, (self.mid_x % screen_width - screen_width, 0))
+        
+        screen.blit(self.front_trees, (self.front_x % screen_width, 0))
+        screen.blit(self.front_trees, (self.front_x % screen_width - screen_width, 0))
+        
+        screen.blit(self.light, (self.light_x % screen_width, 0))
+        screen.blit(self.light, (self.light_x % screen_width - screen_width, 0))
 
 
 class Camera():
-    def __init__(self, screen_width, screen_height ,world_width, world_height):
+    def __init__(self, screen_width, screen_height, world_width, world_height):
         self.x = 0
         self.y = 0
         self.screen_width = screen_width
-        self.screen_height= screen_height
+        self.screen_height = screen_height
         self.world_width = world_width
         self.world_height = world_height
-        self.smoothness = 0.1
+        self.smoothness = 0.5
 
     def follow(self, target_x, target_y):
-        target_camera_x = target_x - self.screen_width //2
-        target_camera_y = target_y = self.screen_height //2
+        target_camera_x = target_x - self.screen_width // 2
+        target_camera_y = target_y - self.screen_height // 2 
 
-
-        self.x += (target_camera_x - self.x) *self.smoothness
+        self.x += (target_camera_x - self.x) * self.smoothness
         self.y += (target_camera_y - self.y) * self.smoothness
 
-        self.x = max(0, min(self.x, self.world_width - self.screen_height))
+        # Ograniczenia dla obu osi
+        self.x = max(0, min(self.x, self.world_width - self.screen_width))
+        self.y = max(0, min(self.y, self.world_height - self.screen_height))
 
-    def apply(self, x , y):
-        return x - self.x, y- self.y
+    def apply(self, x, y):
+        return x - self.x, y - self.y  
     
-    def get_viev_rect(self):
+    def get_view_rect(self):  
         return pygame.Rect(self.x, self.y, self.screen_width, self.screen_height)
     
 
-
-
-
-class Enemy():
-    step_index = 0
-    RUN_VELOCITY = 0
-    health = 100
+class ColisionSystem():
     def __init__(self):
-        self.run_img = BOF_RUNNING
-        self.idle_img = BOF_IDLE
-        self.attack_img = BOF_ATTACK
-        self.death_img = BOF_DEATH
-        self.Player = Warrior()
-        self.Player_rect = self.Player.warrior_rect
-        self.Player_X_POS = Warrior.X_POS
-        self.Player_Y_POS = Warrior.Y_POS
-        self.X_POS = self.Player_X_POS + random.randint(-1000,1000)
-        self.Y_POS = 1080 - self.idle_img[0].get_height()
-        self.enemy_hitbox = [img.get_rect(topleft=(self.X_POS, self.Y_POS)) for img in self.run_img]
-        self.run_img_left = [pygame.transform.flip(img, True, False) for img in self.run_img]
-        self.attack_img_left = [pygame.transform.flip(img, True, False) for img in self.attack_img]
+        self.objects = []
 
-        if self.X_POS > self.Player_X_POS:
-            self.enemy_move_left = True
-            self.enemy_move = False
-            self.enemy_attack = False
-            self.enemy_attack_left = False
-            self.enemy_idle = False
-            self.enemy_death = False
-        elif self.X_POS < self.Player_X_POS:
-            self.enemy_move_left = False
-            self.enemy_move = False
-            self.enemy_attack = False
-            self.enemy_attack_left = False
-            self.enemy_idle = False
-            self.enemy_death = False
+
+    def registerobjects(self, obj, obj_type,):
+        self.objects.append({
+            'obj': obj,
+            'type': obj_type,
+            'rect': getattr(obj, 'mask', None)
+        })
+
+    def check_collisions(self):
+        collisions = []
+
+        for i ,obj1 in enumerate(self.objects):
+            for obj2 in self.objects[i+1:]:
+                if self._check_collision(obj1, obj2):
+                    collisions.append((obj1, obj2))
+
+        
+        return collisions
+    
+    def _check_collision(self, obj1, obj2):
+        if not obj1['rect'].colliderect(obj2['rect']):
+            return False
+        
+        if obj1['mask'] and obj2['mask']:
+            offset_x = obj2['rect'].x - obj1['rect'].x
+            offset_y = obj2['rect'].y - obj1['rect'].y
+            return obj1['mask'].overlap(obj2['mask'], (offset_x, offset_y)) is not None
+        
+        return True
+    
+class Enemy():
+    def __init__(self):
+        self.PlayerX = Warrior.X_POS
+        self.PlayerY = Warrior.Y_POS
+        # self.player_rect = Warrior.warrior_rect
+
+
+        self.idle = BOF_IDLE
+        self.move = BOF_RUNNING
+        self.attack = BOF_ATTACK
+        self.death = BOF_DEATH 
+        #rectangles
+        self.idle_rect = self.idle[0].get_rect() # dla pierwszego obrazu 
+        self.move_rect = self.move[0].get_rect()
+        self.attack_rect = self.attack[0].get_rect()
+        self.death_rect = self.death[0].get_rect()
+
+        self.mask = pygame.mask.from_surface(self.idle[0])
+        
+        #parameters of an enemy
+
+        self.frame_index = 0
+        self.step_index = 0
+        self.speed = 2
+        self.direction = 1
+        self.health = 100
+        self.attack_range = 100
+        self.attack_damage = 10
+        self.state = "Idle"
+
+        #Position of enemy depends of player position
+        self.x = self.PlayerX + 100
+        self.y = self.PlayerY
 
     def update(self):
-        enemy_hitbox = self.enemy_hitbox[self.step_index % len(self.enemy_hitbox)]
-        player_hitbox = self.Player_rect  # Zakładając, że Player_X_POS ma atrybut .rect
-        if not enemy_hitbox.colliderect(player_hitbox):
-            # Wróg się oddala od gracza
-            if self.X_POS > self.Player_X_POS:
-                self.enemy_move = True
-                self.enemy_move_left = False
-            else:
-                self.enemy_move_left = True
-                self.enemy_move = False
-
-            self.enemy_attack = False
-            self.enemy_idle = False
-            self.enemy_death = False
-
-        else:
-            # Jeśli wróg jest blisko gracza
-            if self.X_POS < self.Player_X_POS:
-                self.enemy_move = False
-                self.enemy_attack = True
-                self.enemy_attack_left = False
-                self.enemy_idle = False
-                self.enemy_death = False
-            elif self.X_POS >= self.Player_X_POS:
-                self.enemy_move = False
-                self.enemy_attack = False
-                self.enemy_attack_left = True
-                self.enemy_idle = False
-                self.enemy_death = False
-        if self.health < 0:
-            self.enemy_move = False
-            self.enemy_move_left = False
-            self.enemy_attack = False
-            self.enemy_attack_left = False
-            self.enemy_idle = False
-            self.enemy_death = True
+        # self.x += self.speed * self.direction
+        if self.state == "death":
+            self.enemy_death()
+            return
+        if self.health <= 0:
+            self.state = "death"
+            self.frame_index = 0
+            return
+        if self.state == "Idle":
+            self.enemy_idle()
+        if self.state == "Attack":
+            self.enemy_attack()
+            return
+        if self.state == "move":
+            self.enemy_move()
+        print(f"Enemy position: {self.x}, {self.y}")
         
-        else:
-            self.enemy_move = False
-            self.enemy_move_left = False
-            self.enemy_attack = False
-            self.enemy_attack_left = True
-            self.enemy_idle = True
-            self.enemy_death = False
-            
-        if self.enemy_move:
-            self.move()
-        if self.enemy_move_left:
-            self.move_left()
-        if self.enemy_attack:
-            self.attack()
-        if self.enemy_attack_left:
-            self.attack_left()
-        if self.enemy_idle:
-            self.idle()
-        
-    def move(self):
-        self.image = self.run_img[self.step_index% len(self.run_img)]
-        self.run_velocity = 15
+
+    def enemy_death():
+        pass
+    def enemy_idle(self):
+        self.image = self.idle[self.step_index % len(self.idle)]
         self.step_index += 1
-        if self.step_index >= len(self.run_img):
+        if self.step_index >= len(self.idle):
             self.step_index = 0
-    def move_left(self):
-        self.image = self.run_img_left[self.step_index% len(self.run_img_left)]
-        self.run_velocity = -15
-        self.step_index += 1
-        if self.step_index >= len(self.run_img):
-            self.step_index = 0
-    def attack(self):
-        self.image = self.attack_img[self.step_index % len(self.attack_img)]
-        self.step_index += 1
-        if self.step_index >= len(self.run_img):
-            self.step_index = 0
-    def attack_left(self):
-        self.image = self.attack_img_left[self.step_index % len(self.attack_img_left)]
-        self.step_index += 1
-        if self.step_index >= len(self.run_img):
-            self.step_index = 0
-    def idle(self):
-        self.run_velocity = 0
-        self.image = self.idle_img[self.step_index //8 % len(self.idle_img)]
-        self.step_index += 1
-        if self.step_index >= 8 * len(self.idle_img): 
-            self.step_index = 0     
+    def enemy_attack():
+        pass
+    def enemy_move():
+        pass
+    
+
+
+
 
 
 
