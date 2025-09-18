@@ -1,6 +1,6 @@
 import pygame
 import random
-from classes import Warrior , Background
+from classes import Warrior , Background , Enemy
 
 pygame.init()
 
@@ -10,6 +10,9 @@ screen_h = 1080
 screen_w = 1920
 screen = pygame.display.set_mode((screen_w, screen_h))
 pygame.display.set_caption("Warrior Game")
+
+
+
 
 def main():
     clock = pygame.time.Clock()
@@ -29,9 +32,8 @@ def main():
 
         player.update(userInput)
         screen.blit(player.image, (player.warrior_rect.x, player.warrior_rect.y))
-        
 
-        clock.tick(30)
+        clock.tick(60)
         pygame.display.update()
     pygame.quit()
 
