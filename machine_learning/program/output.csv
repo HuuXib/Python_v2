@@ -1,0 +1,310 @@
+lp,"nr pasażera
+PEKA",data,linia - kierunek,"godzina 
+wejścia","godzina 
+wyjścia","czas 
+podróży
+(min)","przystanek 
+wejściowy","przystanek 
+wyjściowy","liczba przejechanych
+przystanków"
+1,1,2025-09-15,174 Unii Lubelskiej,07:01:00,07:10:00,00:09:00,"Osiedle pod lipami
+OPL02","Garbary PKM
+GABA02",3
+2,2,2025-09-15,174 Unii Lubelskiej,08:15:00,08:20:00,00:05:00,"Plac Bernardyński
+PLBE02","AWF 
+AWF73",1
+3,3,2025-09-15,13 Starołęka PKM,07:30:00,07:52:00,00:22:00,"Stadion Miejski
+BULG42","Politechnika
+PP71",14
+4,4,2025-09-15,13 Starołęka PKM,07:30:00,07:52:00,00:22:00,"Stadion Miejski
+BULG42","Politechnika
+PP71",14
+5,5,2025-09-15,13 Starołęka PKM,07:30:00,07:52:00,00:22:00,"Stadion Miejski
+BULG42","Politechnika
+PP71",14
+6,6,2025-09-15,12 starołęka PKM,07:20:00,07:31:00,00:11:00,"Poznań główny
+POGL42","serafitek
+SERA71",4
+7,7,2025-09-15,12 starołęka PKM,07:20:00,07:31:00,00:11:00,"Poznań główny
+POGL42","serafitek
+SERA71",4
+8,8,2025-09-15,12 starołęka PKM,07:20:00,07:31:00,00:11:00,"Poznań główny
+POGL42","serafitek
+SERA71",4
+9,9,2025-09-15,12 Osiedle sobieskiego,06:50:00,07:27:00,00:37:00,"Starołęka PKM
+STAR42","Osiedle sobieskiego
+SOB41",24
+10,10,2025-09-15,12 Osiedle sobieskiego,06:50:00,07:27:00,00:37:00,"Starołęka PKM
+STAR42","Osiedle sobieskiego
+SOB41",24
+11,11,2025-09-15,3 franowo,07:10:00,07:20:00,00:10:00,"Błażeja
+BLAZ42","kmieca
+KMIE42",9
+12,12,2025-09-15,3 franowo,07:10:00,07:20:00,00:10:00,"Błażeja
+BLAZ42","kmieca
+KMIE42",9
+13,13,2025-09-15,6 junikowo,07:15:00,07:25:00,00:10:00,"Kórnicka
+KORN41","Serafitek
+SERA72",3
+14,14,2025-09-15,6 junikowo,07:15:00,07:25:00,00:10:00,"Kórnicka
+KORN41","Serafitek
+SERA72",3
+15,15,2025-09-15,7 ogrody,06:50:00,06:55:00,00:05:00,"Połabska
+POLA42","Murawa
+MURA42",3
+16,16,2025-09-15,7 ogrody,06:50:00,06:55:00,00:05:00,"Połabska
+POLA42","Murawa
+MURA42",3
+17,17,2025-09-15,6 junikowo,07:20:00,07:38:00,00:18:00,"Miłostowo
+MILO42","Poznań główny
+POGL41",12
+18,18,2025-09-15,6 junikowo,07:20:00,07:38:00,00:18:00,"Miłostowo
+MILO42","Poznań główny
+POGL41",12
+19,19,2025-09-15,6 junikowo,07:20:00,07:38:00,00:18:00,"Miłostowo
+MILO42","Poznań główny
+POGL41",12
+20,20,2025-09-15,6 junikowo,07:20:00,07:39:00,00:19:00,"Miłostowo
+MILO42","wierzbięcice
+WIER41",13
+21,21,2025-09-15,6 junikowo,07:20:00,07:40:00,00:20:00,"Miłostowo
+MILO42","półwiejska
+POLW41",14
+22,22,2025-09-15,6 junikowo,07:23:00,07:39:00,00:16:00,"węgorka
+WEGO41
+","wierzbięcice
+WIER42",10
+23,23,2025-09-15,183 Rondo Śródka,07:15:00,07:36:00,00:21:00,"Szarych Szeregów
+SZSZ01","Aleje Solidarności
+ROSO04",15
+24,24,2025-09-15,183 Rondo Śródka,07:15:00,07:36:00,00:21:00,"Szarych Szeregów
+SZSZ01","Aleje Solidarności
+ROSO04",15
+25,25,2025-09-15,183 Rondo Śródka,07:15:00,07:36:00,00:21:00,"Szarych Szeregów
+SZSZ01","Aleje Solidarności
+ROSO04",15
+26,26,2025-09-15,16 franowo,11:00:00,11:10:00,00:10:00,"Plac Bernardyński
+PLBE71","Kórnicka
+KORN41",3
+27,27,2025-09-15,16 franowo,11:00:00,11:10:00,00:10:00,"Plac Bernardyński
+PLBE71","Kórnicka
+KORN41",3
+28,28,2025-09-15,16 franowo,11:00:00,11:10:00,00:10:00,"Plac Bernardyński
+PLBE71","Kórnicka
+KORN41",3
+29,29,2025-09-15,16 franowo,11:00:00,11:10:00,00:10:00,"Plac Bernardyński
+PLBE71","Kórnicka
+KORN41",3
+30,30,2025-09-15,16 osiedle sobieskiego,11:00:00,11:05:00,00:05:00,"Plac Bernardyński
+PLBE72","Aleje Marcinkowskiego
+MRCI72",2
+31,31,2025-09-15,16 osiedle sobieskiego,11:00:00,11:05:00,00:05:00,"Plac Bernardyński
+PLBE72","Aleje Marcinkowskiego
+MRCI72",2
+32,32,2025-09-15,16 osiedle sobieskiego,11:00:00,11:05:00,00:05:00,"Plac Bernardyński
+PLBE72","Aleje Marcinkowskiego
+MRCI72",2
+33,33,2025-09-15,16 osiedle sobieskiego,11:00:00,11:05:00,00:05:00,"Plac Bernardyński
+PLBE72","Aleje Marcinkowskiego
+MRCI72",2
+34,34,2025-09-15,11 Unii Lubelskiej,11:10:00,11:11:00,00:01:00,"Most Teatralny
+MT71","Rondo Kaponiera
+RKAP71",1
+35,35,2025-09-15,11 Unii Lubelskiej,11:10:00,11:11:00,00:01:00,"Most Teatralny
+MT71","Rondo Kaponiera
+RKAP71",1
+36,36,2025-09-15,11 Unii Lubelskiej,11:10:00,11:11:00,00:01:00,"Most Teatralny
+MT71","Rondo Kaponiera
+RKAP71",1
+37,37,2025-09-15,11 Unii Lubelskiej,11:10:00,11:11:00,00:01:00,"Most Teatralny
+MT71","Rondo Kaponiera
+RKAP71",1
+38,38,2025-09-15,176 Garbary PKM,11:30:00,12:01:00,00:31:00,"Osiedle dębina
+OSDE02","Garbary PKM
+GABA03",17
+39,39,2025-09-15,6 junikowo,11:20:00,11:38:00,00:18:00,"Miłostowo
+MILO42","Poznań główny
+POGL41",12
+40,40,2025-09-15,6 junikowo,11:20:00,11:38:00,00:18:00,"Miłostowo
+MILO42","Poznań główny
+POGL41",12
+41,41,2025-09-15,6 junikowo,11:20:00,11:38:00,00:18:00,"Miłostowo
+MILO42","Poznań główny
+POGL41",12
+42,42,2025-09-15,6 junikowo,11:20:00,11:39:00,00:19:00,"Miłostowo
+MILO42","wierzbięcice
+WIER42",13
+43,43,2025-09-15,6 junikowo,11:20:00,11:40:00,00:20:00,"Miłostowo
+MILO42","półwiejska
+POLW41",14
+44,44,2025-09-15,6 junikowo,11:23:00,11:39:00,00:16:00,"węgorka
+WEGO41
+","wierzbięcice
+WIER42",10
+45,45,2025-09-15,181 rondo rataje,11:50:00,11:55:00,00:05:00,"krzywoustego
+KRGO01","szwedzka
+SZWE01",4
+46,46,2025-09-15,181 rondo rataje,11:50:00,11:55:00,00:05:00,"krzywoustego
+KRGO01","szwedzka
+SZWE01",4
+47,47,2025-09-15,181 rondo rataje,11:50:00,11:55:00,00:05:00,"krzywoustego
+KRGO01","szwedzka
+SZWE01",4
+48,48,2025-09-15,181 rondo rataje,11:50:00,11:55:00,00:05:00,"krzywoustego
+KRGO01","szwedzka
+SZWE01",4
+49,49,2025-09-15,181 rondo rataje,11:50:00,11:55:00,00:05:00,"krzywoustego
+KRGO01","szwedzka
+SZWE01",4
+50,50,2025-09-15,181 rondo rataje,11:50:00,11:57:00,00:07:00,"krzywoustego
+KRGO01", Szwajcarska Szpital SSZP04,5
+51,6,2025-09-15,12 Osiedle Sobieskiego ,13:20:00,13:31:00,00:11:00,"Poznań główny
+POGL41","serafitek
+SERA72",4
+52,7,2025-09-15,12 Osiedle Sobieskiego ,13:20:00,13:31:00,00:11:00,"Poznań główny
+POGL41","serafitek
+SERA72",4
+53,8,2025-09-15,12 Osiedle Sobieskiego ,13:20:00,13:31:00,00:11:00,"Poznań główny
+POGL41","serafitek
+SERA72",4
+54,26,2025-09-15,16 osiedle sobieskiego,15:00:00,15:10:00,00:10:00,"Plac Bernardyński
+PLBE72","Kórnicka
+KORN42",3
+55,27,2025-09-15,16 osiedle sobieskiego,15:00:00,15:10:00,00:10:00,"Plac Bernardyński
+PLBE72","Kórnicka
+KORN42",3
+56,28,2025-09-15,16 osiedle sobieskiego,15:00:00,15:10:00,00:10:00,"Plac Bernardyński
+PLBE72","Kórnicka
+KORN42",3
+57,29,2025-09-15,16 osiedle sobieskiego,15:00:00,15:10:00,00:10:00,"Plac Bernardyński
+PLBE72","Kórnicka
+KORN42",3
+58,58,2025-09-15,190 Rondo Rataje,16:40:00,16:45:00,00:05:00,"Osiedle Sobieskiego
+SOB30","wieża RTV 
+WRTV02",4
+59,59,2025-09-15,190 Rondo Rataje,16:40:00,16:45:00,00:05:00,"Osiedle Sobieskiego
+SOB30","wieża RTV 
+WRTV02",4
+60,60,2025-09-15,190 Rondo Rataje,16:40:00,16:45:00,00:05:00,"Osiedle Sobieskiego
+SOB30","wieża RTV 
+WRTV02",4
+61,61,2025-09-15,190 Rondo Rataje,16:40:00,16:45:00,00:05:00,"Osiedle Sobieskiego
+SOB30","wieża RTV 
+WRTV02",4
+62,62,2025-09-15,190 Rondo Rataje,18:40:00,18:45:00,00:05:00,"Osiedle Sobieskiego
+SOB30","wieża RTV 
+WRTV02",4
+63,63,2025-09-15,190 Rondo Rataje,18:40:00,18:45:00,00:05:00,"Osiedle Sobieskiego
+SOB30","wieża RTV 
+WRTV02",4
+64,64,2025-09-15,190 Rondo Rataje,18:40:00,18:45:00,00:05:00,"Osiedle Sobieskiego
+SOB30","wieża RTV 
+WRTV02",4
+65,65,2025-09-15,190 Rondo Rataje,18:40:00,18:45:00,00:05:00,"Osiedle Sobieskiego
+SOB30","wieża RTV 
+WRTV02",4
+66,66,2025-09-15,174 Unii Lubelskiej,18:30:00,18:47:00,00:17:00,"Osiedle Sobieskiego
+SOB30","Osiedle Pod Lipami
+OPL02",13
+67,67,2025-09-15,174 Unii Lubelskiej,18:30:00,18:47:00,00:17:00,"Osiedle Sobieskiego
+SOB30","Osiedle Pod Lipami
+OPL02",13
+68,68,2025-09-15,174 Unii Lubelskiej,18:30:00,18:47:00,00:17:00,"Osiedle Sobieskiego
+SOB30","Osiedle Pod Lipami
+OPL02",13
+69,69,2025-09-15,174 Unii Lubelskiej,18:30:00,18:47:00,00:17:00,"Osiedle Sobieskiego
+SOB30","Osiedle Pod Lipami
+OPL02",13
+70,70,2025-09-15,174 Unii Lubelskiej,18:30:00,18:47:00,00:17:00,"Osiedle Sobieskiego
+SOB30","Osiedle Pod Lipami
+OPL02",13
+71,71,2025-09-15,174 Unii Lubelskiej,18:30:00,18:47:00,00:17:00,"Osiedle Sobieskiego
+SOB30","Osiedle Pod Lipami
+OPL02",13
+72,72,2025-09-15,174 Unii Lubelskiej,18:30:00,18:47:00,00:17:00,"Osiedle Sobieskiego
+SOB30","Osiedle Pod Lipami
+OPL02",13
+73,73,2025-09-15,7 ogrody,19:00:00,19:55:00,00:55:00,"Połabska
+POLA44","Ogrody 
+OGDY41",36
+74,74,2025-09-15,7 ogrody,19:00:00,19:55:00,00:55:00,"Połabska
+POLA44","Ogrody 
+OGDY41",36
+75,75,2025-09-15,7 ogrody,19:00:00,19:55:00,00:55:00,"Połabska
+POLA44","Ogrody 
+OGDY41",36
+76,76,2025-09-15,7 ogrody,19:00:00,19:55:00,00:55:00,"Połabska
+POLA44","Ogrody 
+OGDY41",36
+77,77,2025-09-15,7 ogrody,19:00:00,19:55:00,00:55:00,"Połabska
+POLA44","Ogrody 
+OGDY41",36
+78,78,2025-09-15,7 połabska,19:00:00,19:55:00,00:55:00,"ogrody
+OGDY 42","połabska 41
+POLA41",36
+79,79,2025-09-15,7 połabska,19:00:00,19:55:00,00:55:00,"ogrody
+OGDY 42","połabska 41
+POLA41",36
+80,80,2025-09-15,7 połabska,19:00:00,19:55:00,00:55:00,"ogrody
+OGDY 42","połabska 41
+POLA41",36
+81,81,2025-09-15,7 połabska,19:00:00,19:55:00,00:55:00,"ogrody
+OGDY 42","połabska 41
+POLA41",36
+82,82,2025-09-15,7 połabska,19:00:00,19:55:00,00:55:00,"ogrody
+OGDY 42","połabska 41
+POLA41",36
+83,83,2025-09-15,7 połabska,19:00:00,19:55:00,00:55:00,"ogrody
+OGDY 42","połabska 41
+POLA41",36
+84,84,2025-09-15,7 połabska,19:00:00,19:55:00,00:55:00,"ogrody
+OGDY 42","połabska 41
+POLA41",36
+85,85,2025-09-15,7 połabska,19:00:00,19:55:00,00:55:00,"ogrody
+OGDY 42","połabska 41
+POLA41",36
+86,86,2025-09-15,7 połabska,19:00:00,19:55:00,00:55:00,"ogrody
+OGDY 42","połabska 41
+POLA41",36
+87,87,2025-09-15,7 połabska,19:00:00,19:55:00,00:55:00,"ogrody
+OGDY 42","połabska 41
+POLA41",36
+88,88,2025-09-15,7 połabska,19:00:00,19:55:00,00:55:00,"ogrody
+OGDY 42","połabska 41
+POLA41",36
+89,89,2025-09-15,7 połabska,19:00:00,19:55:00,00:55:00,"ogrody
+OGDY 42","połabska 41
+POLA41",36
+90,90,2025-09-15,348 Przebędowo/Pętla,20:59:00,21:44:00,00:45:00,"Osiedle Sobieskiego
+SOB30","Przebędowo/Pętla
+PDPET01",36
+91,91,2025-09-15,349 Przebędowo/Pętla,20:59:00,21:44:00,00:45:00,"Osiedle Sobieskiego
+SOB31","Przebędowo/Pętla
+PDPET02",37
+92,92,2025-09-15,350 Przebędowo/Pętla,20:59:00,21:44:00,00:45:00,"Osiedle Sobieskiego
+SOB32","Przebędowo/Pętla
+PDPET03",38
+93,93,2025-09-15,351 Przebędowo/Pętla,20:59:00,21:44:00,00:45:00,"Osiedle Sobieskiego
+SOB33","Przebędowo/Pętla
+PDPET04",39
+94,94,2025-09-15,352 Przebędowo/Pętla,20:59:00,21:44:00,00:45:00,"Osiedle Sobieskiego
+SOB34","Przebędowo/Pętla
+PDPET05",40
+95,95,2025-09-15,353 Przebędowo/Pętla,20:59:00,21:44:00,00:45:00,"Osiedle Sobieskiego
+SOB35","Przebędowo/Pętla
+PDPET06",41
+96,96,2025-09-15,354 Przebędowo/Pętla,20:59:00,21:44:00,00:45:00,"Osiedle Sobieskiego
+SOB36","Przebędowo/Pętla
+PDPET07",42
+97,97,2025-09-15,355 Przebędowo/Pętla,20:59:00,21:44:00,00:45:00,"Osiedle Sobieskiego
+SOB37","Przebędowo/Pętla
+PDPET08",43
+98,98,2025-09-15,356 Przebędowo/Pętla,20:59:00,21:44:00,00:45:00,"Osiedle Sobieskiego
+SOB38","Przebędowo/Pętla
+PDPET09",44
+99,99,2025-09-15,357 Przebędowo/Pętla,20:59:00,21:44:00,00:45:00,"Osiedle Sobieskiego
+SOB39","Przebędowo/Pętla
+PDPET10",45
+100,100,2025-09-15,358 Przebędowo/Pętla,20:59:00,21:44:00,00:45:00,"Osiedle Sobieskiego
+SOB40","Przebędowo/Pętla
+PDPET11",46
