@@ -18,6 +18,7 @@ inputs = smokers_df[['age', 'bmi', 'children']]
 targets = smokers_df.charges
 
 
+
 model = LinearRegression()
 
 model.fit(inputs, targets)

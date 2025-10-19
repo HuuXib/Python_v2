@@ -1,0 +1,101 @@
+lp,"nr pasażera PEKA",data,linia - kierunek,"godzina wejścia","godzina wyjścia","czas podróży (min)","przystanek wejściowy","przystanek wyjściowy","liczba przejechanych przystanków"
+1,1,2025-09-29,9 piątkowska,07:15:00,07:25:00,00:10:00,HCP HCP42,półwiejska POLW42,6
+2,2,2025-09-29,9 piątkowska,07:15:00,07:25:00,00:10:00,HCP HCP42,półwiejska POLW42,6
+3,3,2025-09-29,9 piątkowska,07:15:00,07:25:00,00:10:00,HCP HCP42,półwiejska POLW42,6
+4,4,2025-09-29,9 piątkowska,07:12:00,07:25:00,00:13:00,wspólna WSPO42,półwiejska POLW42,7
+5,5,2025-09-29,9 piątkowska,07:17:00,07:25:00,00:08:00,Traugutta TRAU42,półwiejska POLW42,5
+6,1,2025-09-29,18 franowo,07:35:00,07:41:00,00:06:00,półwiejska POLW42,rondo rataje RRAT72,4
+7,2,2025-09-29,18 franowo,07:35:00,07:45:00,00:10:00,półwiejska POLW42,łacina LACI41,8
+8,3,2025-09-29,18 franowo,07:35:00,07:51:00,00:16:00,półwiejska POLW42,szwedzka SZWE41,13
+9,4,2025-09-29,18 franowo,07:35:00,07:51:00,00:16:00,półwiejska POLW42,szwedzka SZWE41,13
+10,5,2025-09-29,18 franowo,07:35:00,07:51:00,00:16:00,półwiejska POLW42,szwedzka SZWE41,13
+11,6,2025-09-29,6 Budziszyńska,08:00:00,08:12:00,00:12:00,Miłostowo MILO42,kórnicka KORN41,9
+12,7,2025-09-29,6 Budziszyńska,08:00:00,08:12:00,00:12:00,Miłostowo MILO42,kórnicka KORN41,9
+13,8,2025-09-29,6 Budziszyńska,08:00:00,08:12:00,00:12:00,Miłostowo MILO42,kórnicka KORN41,9
+14,9,2025-09-29,6 Budziszyńska,08:01:00,08:12:00,00:11:00,mogileńska MOGI42,kórnicka KORN41,8
+15,10,2025-09-29,6 Budziszyńska,08:02:00,08:12:00,00:10:00,łomżyńska LOMZ42,kórnicka KORN41,7
+16,11,2025-09-29,6 Budziszyńska,08:03:00,08:12:00,00:09:00,termalna TERM 42,kórnicka KORN41,6
+17,12,2025-09-29,6 Budziszyńska,08:03:00,08:12:00,00:09:00,termalna TERM 42,kórnicka KORN41,6
+18,13,2025-09-29,6 Budziszyńska,08:02:00,08:18:00,00:16:00,łomżyńska LOMZ42,serafitek SERA72,10
+19,11,2025-09-29,7 ogrody,08:16:00,08:28:00,00:12:00,kórnicka KORN41,rolna ROLN41,9
+20,14,2025-09-29,12 starołęka PKM,09:00:00,09:16:00,00:16:00,starołęka PKM STAR 42,AWF AWF41,11
+21,15,2025-09-29,12 starołęka PKM,09:00:00,09:16:00,00:16:00,starołęka PKM STAR 42,AWF AWF41,11
+22,16,2025-09-29,12 starołęka PKM,09:00:00,09:16:00,00:16:00,starołęka PKM STAR 42,AWF AWF41,11
+23,17,2025-09-29,12 starołęka PKM,09:00:00,09:16:00,00:16:00,starołęka PKM STAR 42,AWF AWF41,11
+24,18,2025-09-29,12 starołęka PKM,09:01:00,09:16:00,00:15:00,bystra BYST42,AWF AWF41,10
+25,19,2025-09-29,12 starołęka PKM,09:01:00,09:16:00,00:15:00,bystra BYST42,AWF AWF41,10
+26,20,2025-09-29,12 starołęka PKM,09:08:00,09:16:00,00:08:00,wioślarska WIOS72,AWF AWF41,4
+27,21,2025-09-29,12 starołęka PKM,09:08:00,09:16:00,00:08:00,wioślarska WIOS72,AWF AWF41,4
+28,22,2025-09-29,12 starołęka PKM,09:08:00,09:16:00,00:08:00,wioślarska WIOS72,AWF AWF41,4
+29,23,2025-09-29,12 starołęka PKM,09:08:00,09:16:00,00:08:00,wioślarska WIOS72,AWF AWF41,4
+30,24,2025-09-29,12 starołęka PKM,09:08:00,09:16:00,00:08:00,wioślarska WIOS72,AWF AWF41,4
+31,20,2025-09-29,18 ogrody,09:50:00,09:54:00,00:04:00,AWF AWF41,poznań główny POGL41,3
+32,21,2025-09-29,18 ogrody,09:50:00,09:54:00,00:04:00,AWF AWF41,poznań główny POGL41,3
+33,22,2025-09-29,18 ogrody,09:50:00,09:54:00,00:04:00,AWF AWF41,poznań główny POGL41,3
+34,23,2025-09-29,18 ogrody,09:50:00,09:54:00,00:04:00,AWF AWF41,poznań główny POGL41,3
+35,24,2025-09-29,18 ogrody,09:50:00,09:54:00,00:04:00,AWF AWF41,poznań główny POGL41,3
+36,25,2025-09-29,13 junikowo,11:30:00,11:44:00,00:14:00,bystra BYST42,politechnikia PP72,12
+37,26,2025-09-29,13 junikowo,11:30:00,11:44:00,00:14:00,bystra BYST42,politechnikia PP72,12
+38,27,2025-09-29,13 junikowo,11:30:00,11:44:00,00:14:00,bystra BYST42,politechnikia PP72,12
+39,28,2025-09-29,13 junikowo,11:30:00,11:44:00,00:14:00,bystra BYST42,politechnikia PP72,12
+40,29,2025-09-29,13 junikowo,11:33:00,11:44:00,00:11:00,rondo starołęka RSTA46,politechnikia PP72,10
+41,30,2025-09-29,13 junikowo,11:33:00,11:44:00,00:11:00,rondo starołęka RSTA46,politechnikia PP72,10
+42,31,2025-09-29,13 junikowo,11:33:00,11:44:00,00:11:00,rondo starołęka RSTA46,politechnikia PP72,10
+43,32,2025-09-29,13 junikowo,11:33:00,11:44:00,00:11:00,rondo starołęka RSTA46,politechnikia PP72,10
+44,33,2025-09-29,13 junikowo,11:43:00,11:44:00,00:01:00,kórnicka KORN78,politechnikia PP72,1
+45,34,2025-09-29,13 junikowo,11:43:00,11:44:00,00:01:00,kórnicka KORN78,politechnikia PP72,1
+46,35,2025-09-29,13 junikowo,11:43:00,11:44:00,00:01:00,kórnicka KORN78,politechnikia PP72,1
+47,25,2025-09-29,16 os. Sobieskiego,11:45:00,11:46:00,00:01:00,politechnikia PP72,most św. Rocha MORO72,1
+48,26,2025-09-29,16 os. Sobieskiego,11:45:00,11:47:00,00:02:00,politechnikia PP72,plac bernardyński PLBE72,2
+49,27,2025-09-29,16 os. Sobieskiego,11:45:00,11:48:00,00:03:00,politechnikia PP72,wrocławska WROC72,3
+50,28,2025-09-29,16 os. Sobieskiego,11:45:00,11:49:00,00:04:00,politechnikia PP72,aleje marcinkowskiego MRCI72,4
+51,29,2025-09-29,16 os. Sobieskiego,11:45:00,11:51:00,00:06:00,politechnikia PP72,27 grudnia - teatr polski GRUD72,5
+52,30,2025-09-29,16 os. Sobieskiego,11:45:00,11:53:00,00:08:00,politechnikia PP72,Fredry FRRY42,6
+53,36,2025-09-29,17 górczyn PKM,12:00:00,12:15:00,00:15:00,Zegrze 1  Z124,katedra KATE42,13
+54,37,2025-09-29,17 górczyn PKM,12:00:00,12:15:00,00:15:00,Zegrze 1  Z124,katedra KATE42,13
+55,38,2025-09-29,17 górczyn PKM,12:00:00,12:15:00,00:15:00,Zegrze 1  Z124,katedra KATE42,13
+56,39,2025-09-29,17 górczyn PKM,12:00:00,12:15:00,00:15:00,Zegrze 1  Z124,katedra KATE42,13
+57,40,2025-09-29,17 górczyn PKM,12:00:00,12:15:00,00:15:00,Zegrze 1  Z124,katedra KATE42,13
+58,41,2025-09-29,17 górczyn PKM,12:01:00,12:15:00,00:14:00,Zegrze 2  Z242,katedra KATE42,12
+59,42,2025-09-29,17 górczyn PKM,12:01:00,12:15:00,00:14:00,Zegrze 2  Z242,katedra KATE42,12
+60,43,2025-09-29,17 górczyn PKM,12:02:00,12:15:00,00:13:00,Zegrze3 Z342,katedra KATE42,11
+61,44,2025-09-29,17 górczyn PKM,12:02:00,12:15:00,00:13:00,Zegrze3 Z342,katedra KATE42,11
+62,36,2025-09-29,8 ogrody,12:50:00,12:57:00,00:07:00,katedra KATE42,Fredry FRRY42,4
+63,37,2025-09-29,8 ogrody,12:50:00,12:57:00,00:07:00,katedra KATE42,Fredry FRRY42,4
+64,38,2025-09-29,8 ogrody,12:50:00,12:57:00,00:07:00,katedra KATE42,Fredry FRRY42,4
+65,39,2025-09-29,8 ogrody,12:50:00,12:57:00,00:07:00,katedra KATE42,Fredry FRRY42,4
+66,40,2025-09-29,8 ogrody,12:50:00,12:57:00,00:07:00,katedra KATE42,Fredry FRRY42,4
+67,41,2025-09-29,8 ogrody,12:50:00,12:57:00,00:07:00,katedra KATE42,Fredry FRRY42,4
+68,42,2025-09-29,8 ogrody,12:50:00,12:57:00,00:07:00,katedra KATE42,Fredry FRRY42,4
+69,43,2025-09-29,8 ogrody,12:50:00,12:57:00,00:07:00,katedra KATE42,Fredry FRRY42,4
+70,44,2025-09-29,8 ogrody,12:50:00,13:04:00,00:14:00,katedra KATE42,polna PONA71,7
+71,45,2025-09-29,8 ogrody,12:50:00,13:04:00,00:14:00,katedra KATE42,polna PONA71,7
+72,46,2025-09-29,8 ogrody,12:50:00,13:04:00,00:14:00,katedra KATE42,polna PONA71,7
+73,47,2025-09-29,8 ogrody,12:50:00,13:04:00,00:14:00,katedra KATE42,polna PONA71,7
+74,48,2025-09-29,174 Unii Lubelskiej,15:00:00,15:12:00,00:12:00,Os. Batorego OSBA04,wiktoria WIKT02,6
+75,49,2025-09-29,174 Unii Lubelskiej,15:00:00,15:12:00,00:12:00,Os. Batorego OSBA04,wiktoria WIKT02,6
+76,50,2025-09-29,174 Unii Lubelskiej,15:00:00,15:12:00,00:12:00,Os. Batorego OSBA04,wiktoria WIKT02,6
+77,51,2025-09-29,174 Unii Lubelskiej,15:00:00,15:12:00,00:12:00,Os. Batorego OSBA04,wiktoria WIKT02,6
+78,52,2025-09-29,174 Unii Lubelskiej,15:00:00,15:12:00,00:12:00,Os. Batorego OSBA04,wiktoria WIKT02,6
+79,53,2025-09-29,174 Unii Lubelskiej,15:00:00,15:12:00,00:12:00,Os. Batorego OSBA04,wiktoria WIKT02,6
+80,54,2025-09-29,174 Unii Lubelskiej,15:00:00,15:12:00,00:12:00,Os. Batorego OSBA04,wiktoria WIKT02,6
+81,55,2025-09-29,174 Unii Lubelskiej,15:11:00,15:20:00,00:09:00,umultowska UMUL02,wilczak WILC02,5
+82,56,2025-09-29,174 Unii Lubelskiej,15:11:00,15:20:00,00:09:00,umultowska UMUL02,wilczak WILC02,5
+83,57,2025-09-29,174 Unii Lubelskiej,15:11:00,15:20:00,00:09:00,umultowska UMUL02,wilczak WILC02,5
+84,58,2025-09-29,174 Unii Lubelskiej,15:11:00,15:20:00,00:09:00,umultowska UMUL02,wilczak WILC02,5
+85,59,2025-09-29,174 Unii Lubelskiej,15:11:00,15:20:00,00:09:00,umultowska UMUL02,wilczak WILC02,5
+86,60,2025-09-29,174 Unii Lubelskiej,15:11:00,15:20:00,00:09:00,umultowska UMUL02,wilczak WILC02,5
+87,61,2025-09-29,174 Unii Lubelskiej,15:11:00,15:20:00,00:09:00,umultowska UMUL02,wilczak WILC02,5
+88,62,2025-09-29,174 Unii Lubelskiej,15:11:00,15:20:00,00:09:00,umultowska UMUL02,wilczak WILC02,5
+89,63,2025-09-29,174 Unii Lubelskiej,15:11:00,15:20:00,00:09:00,umultowska UMUL02,wilczak WILC02,5
+90,64,2025-09-29,174 Unii Lubelskiej,15:08:00,15:20:00,00:12:00,stoińskiego STOI02,wilczak WILC02,7
+91,65,2025-09-29,174 Unii Lubelskiej,15:08:00,15:20:00,00:12:00,stoińskiego STOI02,wilczak WILC02,7
+92,66,2025-09-29,174 Unii Lubelskiej,15:08:00,15:20:00,00:12:00,stoińskiego STOI02,wilczak WILC02,7
+93,67,2025-09-29,174 Unii Lubelskiej,15:08:00,15:20:00,00:12:00,stoińskiego STOI02,wilczak WILC02,7
+94,68,2025-09-29,174 Unii Lubelskiej,15:08:00,15:20:00,00:12:00,stoińskiego STOI02,wilczak WILC02,7
+95,69,2025-09-29,174 Unii Lubelskiej,15:08:00,15:20:00,00:12:00,stoińskiego STOI02,wilczak WILC02,7
+96,70,2025-09-29,174 Unii Lubelskiej,15:08:00,15:20:00,00:12:00,stoińskiego STOI02,wilczak WILC02,7
+97,49,2025-09-29,167 rondo śródka,15:11:00,15:14:00,00:03:00,wilczak WILC02,garbary pkm GABA02,2
+98,50,2025-09-29,167 rondo śródka,15:11:00,15:14:00,00:03:00,wilczak WILC02,garbary pkm GABA02,2
+99,51,2025-09-29,167 rondo śródka,15:11:00,15:14:00,00:03:00,wilczak WILC02,garbary pkm GABA02,2
+100,52,2025-09-29,167 rondo śródka,15:11:00,15:14:00,00:03:00,wilczak WILC02,garbary pkm GABA02,2
